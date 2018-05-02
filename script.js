@@ -1,19 +1,19 @@
 "use strict"; {
-    let userName = "";
+    // let userName = "";
     function startGame() {
         let gamePrompt = prompt("Do you want to play against Grant?");
         if (gamePrompt.toLowerCase() === 'yes') {
             let userName = prompt("Brave Hero, what is thine Name?");
-            startCombat();
+            startCombat(userName);
         } else if (gamePrompt.toLowerCase() === 'no') {
             console.log('You are not brave enough!');
         } else {
             let userName = prompt("Brave Hero, what is thine Name?");
-            startCombat();
+            startCombat(userName);
         }
     }
 
-    function startCombat() {
+    function startCombat(userName) {
         
         let braveHero = {
             name: userName,
